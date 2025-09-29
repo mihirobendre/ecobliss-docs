@@ -34,11 +34,11 @@ $d$ = Soil depth (cm)
 ## Equation 6: Modeled SOC stocks
 
 $$ SOC_{bsl,i,t} = \int(SOC_{bsl,i,t}) $$
+
 Where:
 $SOC_{bsl,i,t}$ = Estimated carbon stocks in the SOC pool in the baseline scenario for quantification unit i at the end of year t (tCO2e/ha)
 $\int(SOC_{bsl,i,t})$ = Modeled SOC stocks in the baseline scenario for quantification unit i in year t, calculated by modeling SOC stock changes over the course of the preceding year (tCO2e/ha)
 i = Quantification unit
-
 
 # Error Analysis
 

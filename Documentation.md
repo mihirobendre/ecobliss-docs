@@ -21,7 +21,7 @@ $N$ = Number of cores sampled (unitless)
 
 $OC_{n,dl}$ = Organic carbon content in sample n in depth layer dl (g/kg)
 
-10000 = g/mm$^2$ to kg/ha
+10000 = g/mm $^2$ to kg/ha
 
 This equation is only required when comparing measured SOC from year to year, and is hence not relevant at this stage. However, SOC and bulk density data was collected in two depth layers as approved under VM0042, and SOC content was thus calculated separately for each depth layer, to ensure comparison on an ESM (Equivalent Soil Mass) basis.
 # SOC Modeling

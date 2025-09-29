@@ -11,6 +11,7 @@ Details to be added, if necessary.
 $$ M_{n,dl,SOC} = \frac{M_{n,dl,sample}}{\pi(\frac{D}{2})^2\times N} \times 10000  \times OC_{n,dl} $$
 
 Where:
+
 $M_{n,dl,SOC}$ = SOC mass in soil sample n in depth layer dl (kg/ha)
 
 $M_{n,dl,sample}$ = Soil mass of sample n in depth layer dl (g)

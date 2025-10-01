@@ -1,12 +1,14 @@
 
 # SOC sampling
 
-FAO and IPCC best-practices were followed in soil sampling. The details on this section will be filled out soon.
+FAO and IPCC best-practices were followed in soil sampling.
 
 **Equation 2: Minimum Detectable Difference**
+
 Details to be added.
 
 **Equation 3: Number of Samples**
+
 Details to be added.
 
 # Processing in-situ SOC Data

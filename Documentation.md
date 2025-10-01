@@ -98,10 +98,19 @@ Average monthly precipitation for previous years can be calculated for the proje
 Average monthly temperature for previous years can be calculated for the project area using the TerraClimate dataset, using a [Google Earth Engine script](https://code.earthengine.google.com/198546b6d8902aee26c811bd7b46d3e6), producing the [following graph](https://github.com/mihirobendre/axam-docs/blob/main/References/Axam_Temp_2024.png) for 2024. For estimating future temperature, past year averages from [a Wikipedia article](https://github.com/mihirobendre/axam-docs/blob/main/References/Wa%2C%20Ghana%20-%20Wikipedia.pdf) were used.
 
 #### Evaporation (monthly average)
+As suggested by [RothC_description.pdf](https://github.com/mihirobendre/axam-docs/blob/main/References/RothC_description.pdf), monthly average evaporation has been estimated using the Potential Evapotranspiration, from the nearest site of Tamale, Ghana, from [Müller (1982)](https://github.com/mihirobendre/axam-docs/blob/main/References/Selected_climatic_data_global_set_standard_stations.pdf). Furthermore, Potential Evapotranspiration can be converted to Open Pan Evaporation by dividing by 0.75 (as instructed in [RothC_description.pdf](https://github.com/mihirobendre/axam-docs/blob/main/References/RothC_description.pdf)).
+
+### Management inputs
+
+#### Carbon inputs to soil
+
+Carbon inputs to soil can be calculated as per the Bolinder equation, from the approach suggested in 
+
+Below is the Bolinder equation, where $C_I$, is carbon-input to soil, 
+
+$$C_I = (C_P * S_P) + (C_S * S_S) + (C_R * S_R) + (C_E * S_E) $$
 
 
-Management inputs
-- Carbon inputs to soil
 - Farm Yard Manure
 - DPM/RPM ratio
 

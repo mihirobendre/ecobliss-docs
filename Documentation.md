@@ -95,9 +95,10 @@ $$ IOM = 0.049 \times (31.841)^{1.139} = 2.524 $$
 #### Precipitation (monthly average)
 Average monthly precipitation for previous years can be calculated for the project area using the CHIRPS dataset, using a [Google Earth Engine script](https://code.earthengine.google.com/96e3ad1d956964cfd89fa646ec925c36), producing the [following graph](https://github.com/mihirobendre/axam-docs/blob/main/References/Axam_Rainfall_2024.png) for 2024. For estimating future rainfall, past year averages from [a Wikipedia article](https://github.com/mihirobendre/axam-docs/blob/main/References/Wa%2C%20Ghana%20-%20Wikipedia.pdf) were used.
 #### Temperature (monthly average)
-Average monthly temperature for previous years can be calculated for the project area using the CHIRPS dataset, using a [Google Earth Engine script](https://code.earthengine.google.com/96e3ad1d956964cfd89fa646ec925c36), producing the [following graph](https://github.com/mihirobendre/axam-docs/blob/main/References/Axam_Rainfall_2024.png) for 2024. For estimating future temperature, past year averages from [a Wikipedia article](https://github.com/mihirobendre/axam-docs/blob/main/References/Wa%2C%20Ghana%20-%20Wikipedia.pdf) were used.
+Average monthly temperature for previous years can be calculated for the project area using the TerraClimate dataset, using a [Google Earth Engine script](https://code.earthengine.google.com/198546b6d8902aee26c811bd7b46d3e6), producing the [following graph](https://github.com/mihirobendre/axam-docs/blob/main/References/Axam_Temp_2024.png) for 2024. For estimating future temperature, past year averages from [a Wikipedia article](https://github.com/mihirobendre/axam-docs/blob/main/References/Wa%2C%20Ghana%20-%20Wikipedia.pdf) were used.
 
-- Evaporation (monthly average)
+#### Evaporation (monthly average)
+
 
 Management inputs
 - Carbon inputs to soil

@@ -1,46 +1,99 @@
 
-# SOC Sampling
+# SOC sampling
+
 FAO and IPCC best-practices were followed in soil sampling. The details on this section will be filled out soon.
-## Equation 2: Minimum Detectable Difference
-Details to be added, if necessary.
-## Equation 3: Number of Samples
-Details to be added, if necessary.
-## Equation 4: SOC mass by depth layer
 
+**Equation 2: Minimum Detectable Difference**
+Details to be added.
 
+**Equation 3: Number of Samples**
+Details to be added.
+
+# Processing in-situ SOC Data
+
+## SOC mass by depth layer
+
+**Equation 4:**
 $$ M_{n,dl,SOC} = \frac{M_{n,dl,sample}}{\pi(\frac{D}{2})^2\times N} \times 10000  \times OC_{n,dl} $$
 
 Where:
+- $M_{n,dl,SOC}$ = SOC mass in soil sample n in depth layer dl (kg/ha)
+- $M_{n,dl,sample}$ = Soil mass of sample n in depth layer dl (g)
+- $D$  = Inside diameter of probe or auger
+- $N$ = Number of cores sampled (unitless)
+- $OC_{n,dl}$ = Organic carbon content in sample n in depth layer dl (g/kg)
+- 10000 = g/mm $^2$ to kg/ha
 
-$M_{n,dl,SOC}$ = SOC mass in soil sample n in depth layer dl (kg/ha)
+This equation is only required when comparing measured SOC from year to year, and is hence not relevant at the validation stage. However, SOC and bulk density data was collected in two depth layers as approved under VM0042, and SOC content was thus calculated separately for each depth layer, to ensure comparison on an ESM (Equivalent Soil Mass) basis.
+## Calculating SOC stocks
 
-$M_{n,dl,sample}$ = Soil mass of sample n in depth layer dl (g)
-
-$D$  = Inside diameter of probe or auger
-
-$N$ = Number of cores sampled (unitless)
-
-$OC_{n,dl}$ = Organic carbon content in sample n in depth layer dl (g/kg)
-
-10000 = g/mm $^2$ to kg/ha
-
-This equation is only required when comparing measured SOC from year to year, and is hence not relevant at this stage. However, SOC and bulk density data was collected in two depth layers as approved under VM0042, and SOC content was thus calculated separately for each depth layer, to ensure comparison on an ESM (Equivalent Soil Mass) basis.
-# SOC Modeling
-## Equation 5: SOC stocks
+**Equation 5**
 
 $$ SOC_{model} = 100 \times BD_{corr} \times OC_{n,dl} $$
 
 Where:
+- $SOC_{model}$ = SOC stock as model input data (t/ha)
+- $BD_{corr}$ = Corrected bulk density of the fine soil fraction, after subtracting the mass proportion of the coarse fragments (g/cm $^3$ ) 
+- $d$ = Soil depth (cm)
+- 100 = Conversion factor from g/cm $^2$ to t/ha
 
-$SOC_{model}$ = SOC stock as model input data (t/ha)
+In [RothC_Implementation_Axam/Axam_SOC_Data](https://github.com/mihirobendre/RothC_Implementation_Axam/tree/main/Axam_SOC_Data) the Python script `data_sorting.py` sorts the data from SOC sampling `SRI_LAB_VM0042_Project.xlsx`, separating the SOC data by depth layers (0-15cm and 15-30cm), and applying **Equation 5** to calculate SOC for each layer respectively, as well as the net SOC (combining both depth layers). The results of data processing are shown as:
 
-$BD_{corr}$ = Corrected bulk density of the fine soil fraction, after subtracting the mass proportion of the coarse fragments (g/cm $^3$ ) 
-$d$ = Soil depth (cm)
+```
+SOC % (0-15 cm) average:  0.8508591549295774
 
-100 = Conversion factor from g/cm $^2$ to t/ha
+BD (0-15 cm) average:  1.3674301116427434
+
+SOC (0-15 cm) (g/cm^3):  1.1634904292176023
+
+SOC (0-15 cm) (g/cm^2):  0.17452356438264036
+
+SOC (0-15 cm) (t C/ha):  17.452356438264037
+
+  
+
+SOC % (15-30 cm) average:  0.6605106382978725
+
+BD (15-30 cm) average:  1.4522895622895622
+
+SOC (15-30 cm) (g/cm^3):  0.9592527057812166
+
+SOC (15-30 cm) (g/cm^2):  0.14388790586718248
+
+SOC (15-30 cm) (t C/ha):  14.388790586718248
+
+  
+
+Net SOC (0-30 cm) (t C/ha):  31.841147024982284
+```
+
+The value for Net SOC from processing the SOC data was used as the starting SOC stocks in the RothC SOC model script `RothC_Py.py` in both baseline and project scenarios.
+# SOC Modeling
+
+## Model inputs
+
+After determining the initial SOC stocks from in-situ SOC sampling, lab analysis and processing, the remaining model inputs were determined, for running RothC for a 10-year future-projection. Following are the input parameters needed for a RothC model run:
+
+### Soil parameters
+#### Clay content
+Clay content was analyzed in lab, when soil samples for SOC were collected.
+
+#### IOM (Inert Organic Matter)
 
 
-## Equation 6: Modeled SOC stocks
+Climate parameters
+- Temperature (monthly average)
+- Rainfall (monthly average)
+- Evaporation (monthly average)
+
+Management inputs
+- Carbon inputs to soil
+- Farm Yard Manure
+- DPM/RPM ratio
+
+## Running RothC
+
+### Equation 6:
 
 $$ SOC_{bsl,i,t} = \int(SOC_{bsl,i,t}) $$
 

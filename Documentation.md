@@ -82,7 +82,7 @@ After determining the initial SOC stocks from in-situ SOC sampling, lab analysis
 Clay content was analyzed in lab, when soil samples for SOC were collected.
 
 #### IOM (Inert Organic Matter)
-IOM was calculated from the equation provided in [RothC_description.pdf](https://github.com/mihirobendre/axam-docs/blob/main/Sources/RothC_description.pdf) , as shown:
+IOM was calculated from the equation provided in [RothC_description.pdf](https://github.com/mihirobendre/axam-docs/blob/main/References/RothC_description.pdf) , as shown:
 
 $$ IOM = 0.049 \times SOC^{1.139} $$
 
@@ -93,8 +93,7 @@ $$ IOM = 0.049 \times (31.841)^{1.139} = 2.524 $$
 ### Climate parameters
 
 #### Precipitation (monthly average)
-Average monthly precipitation for previous years can be calculated for the project area using the CHIRPS dataset, using a [Google Earth Engine script](https://code.earthengine.google.com/96e3ad1d956964cfd89fa646ec925c36), 
-
+Average monthly precipitation for previous years can be calculated for the project area using the CHIRPS dataset, using a [Google Earth Engine script](https://code.earthengine.google.com/96e3ad1d956964cfd89fa646ec925c36), producing the [following graph](https://github.com/mihirobendre/axam-docs/blob/main/References/Axam_Rainfall_2024.png). For estimating future rainfall, past averages were used from the 
 #### Temperature (monthly average)
 - Evaporation (monthly average)
 

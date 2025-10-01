@@ -104,15 +104,28 @@ As suggested by [RothC_description.pdf](https://github.com/mihirobendre/axam-doc
 
 #### Carbon inputs to soil
 
-Carbon inputs to soil can be calculated as per the Bolinder equation, from the approach suggested in 
-
-Below is the Bolinder equation, where $C_I$, is carbon-input to soil, 
+Carbon inputs to soil can be calculated as per the Bolinder equation, an approach suggested in [Maas and Lal (2022)](https://github.com/mihirobendre/axam-docs/blob/main/References/A%20case%20study%20of%20the%20RothC%20soil%20carbon%20model%20with%20potential%20evapotranspiration%20and%20remote%20sensing%20model%20inputs.pdf). Below is the Bolinder equation:
 
 $$C_I = (C_P * S_P) + (C_S * S_S) + (C_R * S_R) + (C_E * S_E) $$
 
+Where:
+- $C_I$ is carbon-input to soil
+- $C_P$ is carbon from harvested plant-matter
+- $S_P$ is proportion of $C_P$ left on the field
+- $C_S$ is carbon in stover (leftover plant-matter after harvest)
+- $S_S$ is proportion of $C_S$ left on the field
+- $C_R$ is carbon in roots
+- $S_R$ is proportion of $C_R$ left on the field
+- $C_E$ is carbon in root exudates
+- $S_E$ is proportion of $C_E$ left on the field
 
-- Farm Yard Manure
-- DPM/RPM ratio
+To calculate $C_I$, we need to know the rest of the parameters in the Bolinder equation, which can be estimated using certain pre-established metrics for each specific crop planted on the project area. 
+
+##### Estimating $C_S$ 
+
+#### Farm Yard Manure
+
+#### DPM/RPM ratio
 
 ## Running RothC
 

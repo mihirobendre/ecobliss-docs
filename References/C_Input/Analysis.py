@@ -509,7 +509,7 @@ final_data['baseline'].append(baseline)
 
 ################################
 
-print(final_data)
+#print(final_data)
 
 my_df = pd.DataFrame(final_data)
 my_df.to_csv("output.csv", index=False)

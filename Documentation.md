@@ -16,6 +16,7 @@ Details to be added.
 ## SOC mass by depth layer
 
 **Equation 4:**
+
 $$ M_{n,dl,SOC} = \frac{M_{n,dl,sample}}{\pi(\frac{D}{2})^2\times N} \times 10000  \times OC_{n,dl} $$
 
 Where:

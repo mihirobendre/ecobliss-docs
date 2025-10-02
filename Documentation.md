@@ -227,10 +227,30 @@ Sampling error comes from the variance in soil sampling, which depends on the nu
 ## Combined Error
 Lastly, model error and sampling error are combined using **Equation 63**, and the deducted from the estimated ERs from the SOC pool's difference between project and baseline scenarios.
 
+# Emissions from Other Sources
 
+To calculate emissions from other sources, using QA3 (Default Factors), we are using the functions applicable to project activities on croplands, in [the QA3 folder](https://github.com/mihirobendre/ecobliss-docs/tree/main/References/QA3). The components considered are emissions from Biomass Burning, Fossil Fuel usage, and Fertilizer Application.
+## Biomass Burning
 
+### N2O from Biomass Burning
+In the [Python script](https://github.com/mihirobendre/ecobliss-docs/blob/main/References/QA3/Biomass%20Burning%20N2O.py), main parameter in N2O from Biomass Burning is `MB_bsl`, which is the Biomass Burned, in tons of dry matter per hectare. To estimate `MB_bsl`, we used the value for `C-input base`, or the baseline C-input to soil (as biomass is only burned in baseline scenario), as calculated from [Final_C_input_Calculation.xlsx](https://github.com/mihirobendre/ecobliss-docs/blob/main/References/C_Input/Final_C_input_Calculation.xlsx), and then divided it by 0.45 (a common assumption for carbon content in biomass), to convert tC/ha to t/ha. 
 
+*The sources or assumptions for the remaining parameters is provided within the code itself, along with descriptions as comments.*
 
+### CH4 from Biomass Burning
+In the [Python script](https://github.com/mihirobendre/ecobliss-docs/blob/main/References/QA3/CH4%20Biomass%20Burning.py), the crop breakdowns were copied from [Final_C_input_Calculation.xlsx](https://github.com/mihirobendre/ecobliss-docs/blob/main/References/C_Input/Final_C_input_Calculation.xlsx) , for determining the proportion of the project area covered by each crop, and for crop residue, the values in the `baseline` column (baseline C-input to soil) of [Final_C_input_Calculation.xlsx](https://github.com/mihirobendre/ecobliss-docs/blob/main/References/C_Input/Final_C_input_Calculation.xlsx) were used - and divided by 0.45 (a common assumption for carbon content in biomass), to convert tC/ha to t/ha, multiplied by the project area considered, and converted to kg (multiplying by 1000).
+
+*The sources or assumptions for the remaining parameters is provided within the code itself, along with descriptions as comments.*
+
+## N2O from Fertilizers
+The values in the [Python script](https://github.com/mihirobendre/ecobliss-docs/blob/main/References/QA3/Fossil%20Fuel.py) for fertilizer usage in baseline and project scenarios is known: Urea is 100 kg/ha and NPK is 200 kg/ha in the baseline scenario, and is approximately half of this in the project scenario.
+
+*The sources or assumptions for the remaining parameters is provided within the code itself, along with descriptions as comments.*
+
+## Fossil Fuel Usage
+The fossil fuel usage is estimated in this [Python script](https://github.com/mihirobendre/ecobliss-docs/blob/main/References/QA3/N%20Fertilizers%20N20.py) by known information from the project proponent, about number of tractors, hectares covered per day, days they are used per week, and weeks used per year. 
+
+*The sources or assumptions for the remaining parameters is provided within the code itself, along with descriptions as comments.*
 
 
 

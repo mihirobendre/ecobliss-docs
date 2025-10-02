@@ -40,34 +40,34 @@ Where:
 - $d$ = Soil depth (cm)
 - 100 = Conversion factor from g/cm $^2$ to t/ha
 
-In [RothC_Implementation_Axam/Axam_SOC_Data](https://github.com/mihirobendre/RothC_Implementation_Axam/tree/main/Axam_SOC_Data) the Python script `data_sorting.py` sorts the data from SOC sampling `SRI_LAB_VM0042_Project.xlsx`, separating the SOC data by depth layers (0-15cm and 15-30cm), and applying **Equation 5** to calculate SOC for each layer respectively, as well as the net SOC (combining both depth layers). The results of data processing are shown as:
+In [RothC_Implementation_Ecobliss/Ecobliss_SOC_Data](https://github.com/mihirobendre/RothC_Implementation_Ecobliss/tree/master/Ecobliss_SOC_Data) the Python script `data_sorting.py` sorts the data from SOC sampling `ECOBLISS_SOIL_ANALYSIS_2025.xlsx`, separating the SOC data by depth layers (0-15cm and 15-30cm), and applying **Equation 5** to calculate SOC for each layer respectively, as well as the net SOC (combining both depth layers). The results of data processing are shown as:
 
 ```
-SOC % (0-15 cm) average:  0.8508591549295774
-
-BD (0-15 cm) average:  1.3674301116427434
-
-SOC (0-15 cm) (g/cm^3):  1.1634904292176023
-
-SOC (0-15 cm) (g/cm^2):  0.17452356438264036
-
-SOC (0-15 cm) (t C/ha):  17.452356438264037
+BD (0-30 cm) average:  2.0064558068570983
 
   
 
-SOC % (15-30 cm) average:  0.6605106382978725
+SOC % (0-15 cm) average:  0.7871950683904114
 
-BD (15-30 cm) average:  1.4522895622895622
+SOC (0-15 cm) (g/cm^3):  1.5794721161012117
 
-SOC (15-30 cm) (g/cm^3):  0.9592527057812166
+SOC (0-15 cm) (g/cm^2):  0.23692081741518178
 
-SOC (15-30 cm) (g/cm^2):  0.14388790586718248
-
-SOC (15-30 cm) (t C/ha):  14.388790586718248
+SOC (0-15 cm) (t C/ha):  23.69208174151818
 
   
 
-Net SOC (0-30 cm) (t C/ha):  31.841147024982284
+SOC % (15-30 cm) average:  0.529441302257348
+
+SOC (15-30 cm) (g/cm^3):  1.06230057530424
+
+SOC (15-30 cm) (g/cm^2):  0.159345086295636
+
+SOC (15-30 cm) (t C/ha):  15.9345086295636
+
+
+
+Net SOC (0-30 cm) (t C/ha):  39.62659037108178
 ```
 
 The value for Net SOC from processing the SOC data was used as the starting SOC stocks in the RothC SOC model script `RothC_Py.py` in both baseline and project scenarios.
@@ -82,7 +82,7 @@ After determining the initial SOC stocks from in-situ SOC sampling, lab analysis
 Clay content was analyzed in lab, when soil samples for SOC were collected.
 
 #### IOM (Inert Organic Matter)
-IOM was calculated from the equation provided in [RothC_description.pdf](https://github.com/mihirobendre/axam-docs/blob/main/References/RothC_description.pdf) , as shown:
+IOM was calculated from the equation provided in [RothC_description.pdf](https://github.com/mihirobendre/ecobliss-docs/blob/main/References/RothC_description.pdf) , as shown:
 
 $$ IOM = 0.049 \times SOC^{1.139} $$
 

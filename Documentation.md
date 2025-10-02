@@ -158,14 +158,21 @@ Using the lowest, most conservative estimate possible ([Perplexity search](https
 Root exudates are estimated to represent 5–21% of all photosynthetically-fixed C in plants and trees (Zhang, 2024). Let's choose 5% as a minimum estimate.
 
 This means that 5% of the plant carbon is represented by root exudates. This translates to:
+
 $$\frac{C_E}{(C_P + C_S + C_R + C_E)} = 0.05$$
+
 $$=>C_E = 0.05 \times(C_P + C_S + C_R + C_E)$$
 
 Bringing $C_E$ on one side, and solving:
+
 $$C_E - 0.05 \times C_E= 0.05 \times(C_P + C_S + C_R)$$
+
 $$0.95 \times C_E = 0.05 \times(C_P + C_S + C_R)$$
+
 $$ C_E = \frac{0.05}{0.95} \times(C_P + C_S + C_R)$$
+
 $$ C_E = 0.0526 \times(C_P + C_S + C_R)$$
+
 
 ##### Analysis 
 Then, a dataset on Ghana's crop yields for the Upper West district, for each crop farmed in the region were estimated using the dataset [`Ghana_Crop_Data.csv`](https://github.com/mihirobendre/ecobliss-docs/blob/main/References/C_Input/Ghana_Crop_Data.csv) from [Ghana Open Data Initiative](https://data.gov.gh/dataset/agricultural-production-estimates-1993-2017). Then, the Python script [`Yield_Estimation.py`](https://github.com/mihirobendre/ecobliss-docs/blob/main/References/C_Input/Yield_Estimation.py) estimates the annual yield for each crop, within the Upper West region, and [`Analysis.py`](https://github.com/mihirobendre/ecobliss-docs/blob/main/References/C_Input/Analysis.py) uses all the supporting parameters found above, and utilizes them for the Bolinder equation. The results are stored into `output.csv`. Finally, in [Final_C_input_Calculation.xlsx](https://github.com/mihirobendre/ecobliss-docs/blob/main/References/C_Input/Final_C_input_Calculation.xlsx) these results are used in conjunction with known estimates of coverage of each crop on the project area, in order to estimate the total Carbon Input in the project and baseline scenarios.

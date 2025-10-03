@@ -88,7 +88,7 @@ $$ IOM = 0.049 \times SOC^{1.139} $$
 
 Plugging in SOC = 31.841:
 
-$$ IOM = 0.049 \times (31.841)^{1.139} = 2.524 $$
+$$ IOM = 0.049 \times (39.63)^{1.139} = 3.239 $$
 
 ### Climate parameters
 

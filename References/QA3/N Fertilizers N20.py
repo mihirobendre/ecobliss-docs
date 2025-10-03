@@ -99,8 +99,8 @@ results = {
     "Total N2O Emissions (t CO2e)": round(N2O_total_t, 4),
     "Total N2O Emissions per ha (t CO2e/ha)": round(N2O_total_per_ha, 6)
 }
-
-print(results)
+import pprint
+pprint.pprint(results)
 
 
 #####################################################################
@@ -112,7 +112,7 @@ print(results)
 # Step 1: Define Input Variables
 # -----------------------------
 # Project area (ha)
-project_area_ha = 9000
+project_area_ha = 18200
 
 # Fertilizer application (t of fertilizer applied per year)
 urea_mass_t = 100*0.5 / 1000 * project_area_ha  # tonnes of urea ... kg/ha * tons/kg * area
@@ -189,5 +189,6 @@ results = {
     "Total N2O Emissions (t CO2e)": round(N2O_total_t, 4),
     "Total N2O Emissions per ha (t CO2e/ha)": round(N2O_total_per_ha, 6)
 }
+import pprint
 
-print(results)
+pprint.pprint(results)

@@ -15,7 +15,9 @@ final_data = {'region':[], 'crop': [], 'yield': [], 'sem': [], 'moist_content':[
 # Static parameters
 carbon_content = 0.45
 root_exudate_ratio = 0.05 # of all other biomass
-burnt = 0.20
+biomass_left_post_burn = 0.05
+burnt_in_baseline = 1 - biomass_left_post_burn
+burnt_in_project = 0.90 - biomass_left_post_burn
 
 ##########################
 ######### MAIZE ##########
@@ -75,9 +77,12 @@ final_data['sem'].append(sem)
 final_data['moist_content'].append(moist_content)
 final_data['harvest_index'].append(harvest_index)
 final_data['rs_ratio'].append(rs_ratio)
-final_data['project_c_inp'].append(carbon_input)
 
-burned = C_S*burnt
+burned = C_S*burnt_in_project
+project = carbon_input - burned
+final_data['project_c_inp'].append(project)
+
+burned = C_S*burnt_in_baseline
 baseline = carbon_input - burned
 final_data['baseline_c_inp'].append(baseline)
 
@@ -137,9 +142,12 @@ final_data['sem'].append(sem)
 final_data['moist_content'].append(moist_content)
 final_data['harvest_index'].append(harvest_index)
 final_data['rs_ratio'].append(rs_ratio)
-final_data['project_c_inp'].append(carbon_input)
 
-burned = C_S*burnt
+burned = C_S*burnt_in_project
+project = carbon_input - burned
+final_data['project_c_inp'].append(project)
+
+burned = C_S*burnt_in_baseline
 baseline = carbon_input - burned
 final_data['baseline_c_inp'].append(baseline)
 
@@ -199,9 +207,12 @@ final_data['sem'].append(sem)
 final_data['moist_content'].append(moist_content)
 final_data['harvest_index'].append(harvest_index)
 final_data['rs_ratio'].append(rs_ratio)
-final_data['project_c_inp'].append(carbon_input)
 
-burned = C_S*burnt
+burned = C_S*burnt_in_project
+project = carbon_input - burned
+final_data['project_c_inp'].append(project)
+
+burned = C_S*burnt_in_baseline
 baseline = carbon_input - burned
 final_data['baseline_c_inp'].append(baseline)
 
@@ -261,9 +272,12 @@ final_data['sem'].append(sem)
 final_data['moist_content'].append(moist_content)
 final_data['harvest_index'].append(harvest_index)
 final_data['rs_ratio'].append(rs_ratio)
-final_data['project_c_inp'].append(carbon_input)
 
-burned = C_S*burnt
+burned = C_S*burnt_in_project
+project = carbon_input - burned
+final_data['project_c_inp'].append(project)
+
+burned = C_S*burnt_in_baseline
 baseline = carbon_input - burned
 final_data['baseline_c_inp'].append(baseline)
 
@@ -321,9 +335,12 @@ final_data['sem'].append(sem)
 final_data['moist_content'].append(moist_content)
 final_data['harvest_index'].append(harvest_index)
 final_data['rs_ratio'].append(rs_ratio)
-final_data['project_c_inp'].append(carbon_input)
 
-burned = C_S*burnt
+burned = C_S*burnt_in_project
+project = carbon_input - burned
+final_data['project_c_inp'].append(project)
+
+burned = C_S*burnt_in_baseline
 baseline = carbon_input - burned
 final_data['baseline_c_inp'].append(baseline)
 
@@ -381,9 +398,12 @@ final_data['sem'].append(sem)
 final_data['moist_content'].append(moist_content)
 final_data['harvest_index'].append(harvest_index)
 final_data['rs_ratio'].append(rs_ratio)
-final_data['project_c_inp'].append(carbon_input)
 
-burned = C_S*burnt
+burned = C_S*burnt_in_project
+project = carbon_input - burned
+final_data['project_c_inp'].append(project)
+
+burned = C_S*burnt_in_baseline
 baseline = carbon_input - burned
 final_data['baseline_c_inp'].append(baseline)
 
@@ -441,9 +461,12 @@ final_data['sem'].append(sem)
 final_data['moist_content'].append(moist_content)
 final_data['harvest_index'].append(harvest_index)
 final_data['rs_ratio'].append(rs_ratio)
-final_data['project_c_inp'].append(carbon_input)
 
-burned = C_S*burnt
+burned = C_S*burnt_in_project
+project = carbon_input - burned
+final_data['project_c_inp'].append(project)
+
+burned = C_S*burnt_in_baseline
 baseline = carbon_input - burned
 final_data['baseline_c_inp'].append(baseline)
 
@@ -502,9 +525,12 @@ final_data['sem'].append(sem)
 final_data['moist_content'].append(moist_content)
 final_data['harvest_index'].append(harvest_index)
 final_data['rs_ratio'].append(rs_ratio)
-final_data['project_c_inp'].append(carbon_input)
 
-burned = C_S*burnt
+burned = C_S*burnt_in_project
+project = carbon_input - burned
+final_data['project_c_inp'].append(project)
+
+burned = C_S*burnt_in_baseline
 baseline = carbon_input - burned
 final_data['baseline_c_inp'].append(baseline)
 
